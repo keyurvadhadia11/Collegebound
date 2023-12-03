@@ -1,0 +1,41 @@
+@media screen and (max-width:991px) {
+	.section-signup {
+		min-height: inherit;
+		height: auto;
+	}
+	.left-form {
+		display: none;
+	}
+	.right-form {
+		margin: auto;
+		padding: 50px 20px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.right-form {
+		width: 100%;
+	}
+	.form-card {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.no-lg-gutters {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 575px) {
+	.nav-signup, .nav-signup.nav-four {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.modal-rating-form .form-group:last-child {
+		justify-content: space-between;
+		display: flex;
+	}
+	.modal-rating-form .btn {
+		min-width: 49%;
+	}
+}

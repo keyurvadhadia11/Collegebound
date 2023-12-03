@@ -1,0 +1,96 @@
+<?php
+//die('Working');
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+//define( 'DB_NAME', 'collegebound_ssl' );
+ define( 'DB_NAME', 'collegebound_ssl' );
+//define( 'DB_NAME', 'collegebound_final_ssl' );
+/** MySQL database username */
+define( 'DB_USER', 'devoq' );
+/** MySQL database password */
+define( 'DB_PASSWORD', '9898362004' );
+/** MySQL hostname */
+define( 'DB_HOST', 'collegebound.c0tg0zsgffab.us-east-1.rds.amazonaws.com' );
+/** Database Charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+/** The Database Collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         '97C{IS;*Q%-J(Je$VwfBQxUYR05 @},3zRNj8IoZ9 Rk_8VSa+4#2~YuP[,2!+<f');
+define('SECURE_AUTH_KEY',  '|uD yNaO[Zm+D=yk|HA_9pFwwLBto*,{]lCbY%DUr+AKtw4n=Q|Me/.Qc:$Z&h4a');
+define('LOGGED_IN_KEY',    'MT8;Jkm0R~S.BWHe*gP|):OFGxBV.oG44K>9yQ[|S+;qjJ5pJJSe&)0TUgOtd+j.');
+define('NONCE_KEY',        '?r60`x)G{}#xvQK[6  `8=FJ||SPm|ziV<vMj1QT6d?/![zt6G1E-Q--?%bRu09I');
+define('AUTH_SALT',        'B#W~.c6M`R@&S{0(B11z9B:Btbh|l1pNEVa)4Z_6||Uv..dm+]&Doe]y uf|i}qK');
+define('SECURE_AUTH_SALT', '.>+#!N-qK9Wq/<_e@Mo`5C@,U.B])tONRoQfnquaL8Tl][4F!Ukp}5GOM%bUE+{l');
+define('LOGGED_IN_SALT',   'H>srDH&B*7X~-+&WE@Q6:y^F#6F+-iosd-9FoNE|X5!uRP;673meSZ?K-uE0;z/[');
+define('NONCE_SALT',       ' mYscg<]QITLg+++&QM!Z=@&t1cv8|NDMiJ{R@ML89$Mh,G$$gt-H1r$:Bf; P`W');
+// define( 'WPOSES_AWS_ACCESS_KEY_ID',     'AKIAYOLFHZK4L6WVGC4D' );
+// define( 'WPOSES_AWS_SECRET_ACCESS_KEY', 'BJfofpSgxz2GOEhzxTvGtZ8QBYQdsUuKlKhu++IkuSo0' ); 
+// AWS Secret Access Key
+define('WP_SES_SECRET_KEY','ryyOo1H7zSIuWD6UMCyt+WAnlpAflmhwtROXn6LB');
+//When using defines to hardcode your setting, don't forget to define the SES endpoints, too :   
+//define('WP_SES_ENDPOINT', 'email-smtp.us-east-1.amazonaws.com'); 
+define('WP_SES_ACCESS_KEY','AKIAYOLFHZK4FWCHAHNG');
+//define('WP_SES_ACCESS_KEY','AKIAWFTEJ37SKESFVDGX');
+/**#@-*/
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+define('FORCE_SSL_ADMIN', true);
+define('RELOCATE', TRUE);
+$_SERVER['HTTPS'] = 'on';
+define('WP_HOME','https://collegebound.app');
+define('WP_SITEURL','https://collegebound.app');
+define('FS_METHOD', 'direct');
+
+define('ALTERNATE_WP_CRON', true);
+/* That's all, stop editing! Happy publishing. */
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
